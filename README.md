@@ -1,8 +1,16 @@
-# MyTicTacToe
+![tictactoe3](https://user-images.githubusercontent.com/79155265/161431408-ba0ea415-3822-44a3-a8e4-61a43486c51f.png)
+
+# MyTicTacToe #
 
 Tic Tac Toe created in Angular with Sass and Nebular cosmic theme
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+
+
+---------------------------
+
+![tictactoe1](https://user-images.githubusercontent.com/79155265/161431429-fbd0c022-fbd1-4e4c-adb0-77d2eaa4bb50.png)
+
 
 ## Development server
 
