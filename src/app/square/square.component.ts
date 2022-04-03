@@ -1,12 +1,26 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
-  template: `    
-    <button>{{value}}</button>
+  template: `
+    <button nbButton status="warning" *ngIf="!value">
+      {{ value }}      
+    </button>
+
+    <button nbButton hero status="success" *ngIf="value == 'X'">
+      {{ value }}
+    </button>
+
+    <button nbButton hero status="info" *ngIf="value == 'O'">
+      {{ value }}
+    </button>
   `,
-  styles: ['button { width: 100%; height: 100%; font-size: 5em !important; }'],
+  styles: [
+    'button { width: 100%; height: 100%; font-size: 6em !important;}',
+    'button:focus {outline: none;  box-shadow: none;}',
+    'button:focus {background: violet;} ',
+  ],
 })
-export class SquareComponent {  
-  @Input() value: 'X' | 'O' = 'O';  
+export class SquareComponent {
+  @Input() value: 'X' | 'O' = 'X';
 }

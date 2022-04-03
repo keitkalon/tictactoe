@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
   squares: any[] = Array(9).fill(null);
-  xIsNext: boolean  = true;
-  winner: number = 0; 
+  xIsNext: boolean = true;
+  winner: number = 0;
 
   constructor() {}
 
@@ -23,14 +23,14 @@ export class BoardComponent implements OnInit {
   get player() {
     return this.xIsNext ? 'X' : 'O';
   }
-  makeMove(idx: number){
-    if(!this.squares[idx]){
+  makeMove(idx: number) {
+    if (!this.squares[idx]) {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
     this.winner = this.calculateWinner();
   }
-  calculateWinner(): number{
+  calculateWinner(): number {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -41,13 +41,15 @@ export class BoardComponent implements OnInit {
       [0, 4, 8],
       [2, 4, 6],
     ];
-    for(let i = 0; i< lines.length; i++){
-      const [a, b, c] = lines[i]
-      if (  this.squares[a] &&
-            this.squares[a] === this.squares[b] &&
-            this.squares[a] === this.squares[c]){
-              return this.squares[a];
-            }
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c] = lines[i];
+      if (
+        this.squares[a] &&
+        this.squares[a] === this.squares[b] &&
+        this.squares[a] === this.squares[c]
+      ) {
+        return this.squares[a];
+      }
     }
     return 0;
   }
