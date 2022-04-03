@@ -7,7 +7,7 @@
 </h2>
 
 <main>
-    <app-square
+    <app-square 
         *ngFor="let val of squares; let i = index"
         [value]="val"
         (click)="makeMove(i)">

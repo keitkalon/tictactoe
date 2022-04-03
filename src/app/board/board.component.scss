@@ -1,0 +1,10 @@
+main {
+  display: grid;
+  grid-template-columns: 33vh 33vh 33vh;
+  grid-gap: 0px;
+}
+
+app-square {
+  border: 1 px rgb(80, 80, 80) solid;
+  height: 25vh;
+}
